@@ -2,7 +2,9 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+# Use a shell so Railway expands its injected PORT variable before Uvicorn
+# validates the integer port value.
+startCommand = "/bin/sh -c 'exec uvicorn app.main:app --host 0.0.0.0 --port $PORT'"
 healthcheckPath = "/health"
 healthcheckTimeout = 120
 restartPolicyType = "ON_FAILURE"
