@@ -1,6 +1,3 @@
-[build]
-builder = "NIXPACKS"
-
 [deploy]
 # Use a shell so Railway expands its injected PORT variable before Uvicorn
 # validates the integer port value.
