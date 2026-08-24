@@ -1,0 +1,12 @@
+venv_ai/
+.venv/
+venv_label/
+__pycache__/
+*.py[cod]
+*.log
+runs/
+outputs/
+*.mp4
+*.avi
+data/
+.pytest_cache/
