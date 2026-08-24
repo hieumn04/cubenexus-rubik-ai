@@ -2,5 +2,6 @@ fastapi>=0.116.0
 uvicorn[standard]>=0.35.0
 pydantic>=2.11.0
 ultralytics>=8.3.0
-opencv-python>=4.10.0
+# Railway/server container has no X11 display libraries; use the headless build.
+opencv-python-headless>=4.10.0
 numpy>=1.26.0
